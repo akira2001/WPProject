@@ -1,0 +1,60 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Godzilla_2014.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800" 
+    d:DataContext="{d:DesignData SampleData/MainViewModelSampleData.xaml}"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+ 
+        <!--Panorama control-->
+        <controls:Panorama Title="Godzilla">
+            <!--Panorama item one-->
+            <controls:PanoramaItem Header="Countdown">
+                <Grid>
+                    <TextBlock FontSize="150" Height="183" HorizontalAlignment="Right" Margin="0,95,203,0" Name="Month" Text="99" VerticalAlignment="Top" Width="192" Foreground="Red"></TextBlock>
+                    <TextBlock FontSize="30" Height="45" HorizontalAlignment="Right" Margin="0,96,220,0" Name="lMonth" Text="M" VerticalAlignment="Top" Width="192" />
+                    <TextBlock FontSize="30" Height="45" HorizontalAlignment="Right" Margin="0,93,6,0" Name="lDays" Text="D" VerticalAlignment="Top" Width="185" />
+                    <TextBlock FontSize="150" Foreground="Red" Height="184" HorizontalAlignment="Right" Margin="0,94,9,0" Name="Day" Text="99" VerticalAlignment="Top" Width="192" />
+                </Grid>
+            </controls:PanoramaItem>
+ 
+            <!--Panorama item two-->
+            <!--Use 'Orientation="Horizontal"' to enable a panel that lays out horizontally-->
+            <controls:PanoramaItem Header="Gallery">
+                <Grid>
+                    <Image Height="467" HorizontalAlignment="Left" Margin="61,11,0,0" Name="Image1" Stretch="Uniform" VerticalAlignment="Top" Width="320" Source="Images/BPbwcQRCcAAY-18.jpg" />
+                </Grid>
+
+            </controls:PanoramaItem>
+            <controls:PanoramaItem Header="Synopsis">
+                <Grid>
+                    <TextBlock Text="A giant radioactive monster called Godzilla awakens from its slumber to wreak destruction on its creators." TextWrapping="Wrap" FontSize="35" FontWeight="Bold" Foreground="Red" />
+                    
+                </Grid>
+            </controls:PanoramaItem>
+            <controls:PanoramaItem Header="Movie">
+                <Grid>
+                </Grid>
+            </controls:PanoramaItem>
+            <controls:PanoramaItem Header="About">
+                <Grid>
+                    <TextBlock FontSize="35" Foreground="Red" Height="47" HorizontalAlignment="Right" Margin="0,24,125,427" Text="Godzilla 2014 V1.0"/>
+                    <TextBlock FontSize="35" Foreground="White" Height="54" HorizontalAlignment="Right" Margin="0,73,135,371" Text="Created by Haihu"/>
+                </Grid>
+            </controls:PanoramaItem>
+        </controls:Panorama>
+       
+    </Grid>
+</phone:PhoneApplicationPage>
